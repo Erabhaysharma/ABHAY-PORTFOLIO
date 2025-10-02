@@ -1,0 +1,23 @@
+{
+  "contact": [
+    {
+      "type": "Email",
+      "icon": "email",
+      "label": "Email",
+      "value": "anuragsharma75547@gamil.com"
+    },
+    {
+      "type": "Location",
+      "icon": "location",
+      "label": "Location",
+      "value": "Ambala,Haryana ,India | Delhi, India"
+    },
+    {
+      "type": "Meetup",
+      "icon": "coffee",
+      "label": "Coffee Meetup - Friday @ 3pm",
+      "value": "Chai sutta bar, Ambala",
+      "link": "https://maps.google.com?q=Blue+Tokai+Coffee+Roasters+Jaipur"
+    }
+  ]
+}

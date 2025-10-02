@@ -1,0 +1,161 @@
+.editProjectsWrap {
+  background: #181c24;
+  color: #f3f4f6;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 16px #0002;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #23272f;
+  max-width: 100%;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.2rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+.addBtn {
+  background: linear-gradient(90deg, #5eead4 60%, #2dd4bf 100%);
+  color: #181c24;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #2dd4bf33;
+  transition: background 0.15s, color 0.15s, box-shadow 0.2s;
+}
+.addBtn:hover {
+  background: linear-gradient(90deg, #2dd4bf 60%, #5eead4 100%);
+  color: #181c24;
+  box-shadow: 0 0 0 2px #5eead4;
+}
+.card {
+  background: #232837;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 12px #0002;
+  padding: 1.5rem 1rem;
+  border: 1px solid #23272f;
+}
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #f3f4f6;
+  background: transparent;
+  font-size: 1.05rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.table th, .table td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+.table th {
+  color: #5eead4;
+  font-weight: 700;
+  background: #232837;
+  border-bottom: 1.5px solid #23272f;
+}
+.table tr {
+  border-radius: 0.7rem;
+  transition: background 0.13s;
+}
+.table tbody tr {
+  border-bottom: 1px solid #232837;
+}
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+.table tr:hover {
+  background: #232837cc;
+}
+.actionBtn {
+  background: none;
+  border: 1.5px solid #23272f;
+  color: #a1a1aa;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.15s, color 0.15s, border 0.15s;
+}
+.actionBtn:hover {
+  color: #5eead4;
+  border: 1.5px solid #5eead4;
+  background: #232837cc;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  background: #232837;
+  border-radius: 0.8rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 12px #0002;
+  border: 1px solid #23272f;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form input, .form select, .form textarea {
+  background: #181c24;
+  color: #f3f4f6;
+  border: 1.5px solid #23272f;
+  border-radius: 0.6rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border 0.15s, box-shadow 0.15s;
+}
+.form input:focus, .form select:focus, .form textarea:focus {
+  border: 1.5px solid #5eead4;
+  box-shadow: 0 0 0 2px #5eead433;
+}
+.formActions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.saveBtn {
+  background: linear-gradient(90deg, #5eead4 60%, #2dd4bf 100%);
+  color: #181c24;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #2dd4bf33;
+  transition: background 0.15s, color 0.15s, box-shadow 0.2s;
+}
+.saveBtn:hover {
+  background: linear-gradient(90deg, #2dd4bf 60%, #5eead4 100%);
+  color: #181c24;
+  box-shadow: 0 0 0 2px #5eead4;
+}
+.cancelBtn {
+  background: none;
+  border: 1.5px solid #23272f;
+  color: #a1a1aa;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s, border 0.15s;
+}
+.cancelBtn:hover {
+  color: #5eead4;
+  border: 1.5px solid #5eead4;
+  background: #232837cc;
+}

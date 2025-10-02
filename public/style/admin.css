@@ -1,0 +1,219 @@
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  background: #181a20;
+  color: #f5f6fa;
+  font-family: 'Inter', sans-serif;
+}
+.sidebar {
+  width: 220px;
+  background: #14151a;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+  border-right: 1px solid #23242a;
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+  padding-left: 32px;
+  letter-spacing: 1px;
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
+  color: #b0b3c6;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, color 0.15s;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+}
+.menuItem:hover {
+  background: #23242a;
+  color: #fff;
+}
+.menuItem.active {
+  color: #fff;
+  font-weight: bold;
+  border-left: 3px solid #6c63ff;
+  background: #23242a;
+  box-shadow: 0 0 8px #6c63ff44;
+}
+.icon {
+  margin-right: 14px;
+  font-size: 1.2em;
+}
+.label {
+  flex: 1;
+}
+.mainArea {
+  margin-left: 220px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #181a20;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  padding: 0 32px;
+  border-bottom: 1px solid #23242a;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logout {
+  background: none;
+  border: none;
+  color: #b0b3c6;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+.logout:hover {
+  color: #ff6b81;
+}
+.content {
+  padding: 40px 40px 0 40px;
+  flex: 1;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.accentBtn {
+  background: linear-gradient(90deg, #6c63ff 60%, #5f9fff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 12px #6c63ff33;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.accentBtn:hover {
+  background: linear-gradient(90deg, #5f9fff 60%, #6c63ff 100%);
+  box-shadow: 0 4px 16px #6c63ff55;
+}
+.card {
+  background: #23242a;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #00000022;
+  padding: 32px 24px;
+  margin-bottom: 32px;
+}
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #f5f6fa;
+  font-size: 1rem;
+}
+.table th, .table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+.table th {
+  color: #b0b3c6;
+  font-weight: 500;
+  border-bottom: 1px solid #32333a;
+}
+.table tr {
+  border-radius: 12px;
+  transition: background 0.12s;
+}
+.table tr:not(:last-child) {
+  border-bottom: 1px solid #292a31;
+}
+.table tr:hover {
+  background: #292a31;
+}
+.iconBtn {
+  background: none;
+  border: none;
+  color: #b0b3c6;
+  font-size: 1.1em;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: background 0.12s, color 0.12s;
+}
+.iconBtn:hover {
+  background: #23242a;
+  color: #6c63ff;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.form > div {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form input, .form select {
+  background: #181a20;
+  border: 1px solid #32333a;
+  border-radius: 8px;
+  color: #f5f6fa;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.15s;
+}
+.form input:focus, .form select:focus {
+  border: 1.5px solid #6c63ff;
+}
+.formActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
+.cancelBtn {
+  background: none;
+  border: 1px solid #32333a;
+  color: #b0b3c6;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border 0.15s, color 0.15s;
+}
+.cancelBtn:hover {
+  border: 1.5px solid #ff6b81;
+  color: #ff6b81;
+}

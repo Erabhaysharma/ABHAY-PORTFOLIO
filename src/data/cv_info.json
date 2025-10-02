@@ -1,0 +1,49 @@
+[
+	{
+		"id": "personal-info",
+		"icon": "FaUser",
+		"title": "Personal Info",
+		"content": [
+			"Name: ABHAY KUMAR",
+			"Email: abhayshrma75547@gmail.com",
+			"Location: Shazhadpur,Ambala , Haryana"
+		],
+		"direction": "left"
+	},
+	{
+		"id": "skills",
+		"icon": "FaTools",
+		"title": "Skills",
+		"content": [
+			"Deeplearning(ANN,CNN,RNN), Python, Machine learning (scikit learn,numpy,pandas,matplotlib,seaborn) ,DataScience(Statistics,liniar algebra,calculus optimization ,Probablity),Web Development(js,react,flask)..."
+		],
+		"direction": "right"
+	},
+	{
+		"id": "projects",
+		"icon": "FaProjectDiagram",
+		"title": "Projects",
+		"content": [
+			"Project A, Project B, Project C, Project D, Project E, Project F"
+		],
+		"direction": "left"
+	},
+	{
+		"id": "experience",
+		"icon": "FaBriefcase",
+		"title": "Experience",
+		"content": [
+			"Company X (2020-2022), Company Y (2018-2020), ..."
+		],
+		"direction": "right"
+	},
+	{
+		"id": "certification",
+		"icon": "FaCertificate",
+		"title": "Certification",
+		"content": [
+			"Certified React Developer, AWS Certified, ..."
+		],
+		"direction": "left"
+	}
+]

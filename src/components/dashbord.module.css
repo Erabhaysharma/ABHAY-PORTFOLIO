@@ -1,0 +1,93 @@
+.dashWrap {
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background: #181c24;
+  min-height: 100vh;
+}
+.statsRow {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.statCard {
+  background: #232837;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 16px #0002;
+  padding: 1.5rem 2.2rem 1.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  position: relative;
+}
+.circleWrap {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.7rem;
+}
+.iconCircle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #181c24;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5eead4;
+  box-shadow: 0 2px 8px #0002;
+  font-size: 1.2rem;
+}
+.percent {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  font-size: 1.1rem;
+  color: #f3f4f6;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+.statLabel {
+  font-size: 1.08rem;
+  color: #a1a1aa;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.welcomeCard {
+  background: #232837;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 16px #0002;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  color: #f3f4f6;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.welcomeCard h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.welcomeCard p {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .statsRow {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .statCard {
+    min-width: 0;
+    width: 100%;
+    padding: 1.2rem 1rem;
+  }
+  .welcomeCard {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+}

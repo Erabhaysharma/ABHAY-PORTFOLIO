@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Data Science & AI",
+    "icon": "FaBrain",
+    "skills": [
+      { "name": "Computer Vision", "percent": 95 },
+      { "name": "Generative AI", "percent": 95 },
+      { "name": "NLP", "percent": 95 },
+      { "name": "Machine Learning", "percent": 90 },
+      { "name": "Deep Learning", "percent": 90 },
+      { "name": "Data Science", "percent": 92 }
+    ]
+  },
+  {
+    "name": "Programming",
+    "icon": "FaCode",
+    "skills": [
+      { "name": "Python", "percent": 95 },
+      { "name": "JavaScript", "percent": 90 },
+      { "name": "C++", "percent": 80 },
+      { "name": "Java", "percent": 75 },
+      { "name": "SQL", "percent": 85 }
+    ]
+  },
+  {
+    "name": "Front End",
+    "icon": "FaPalette",
+    "skills": [
+      { "name": "React.js", "percent": 90 },
+      { "name": "HTML/CSS", "percent": 95 },
+      { "name": "Vite", "percent": 85 },
+      { "name": "UI/UX Design", "percent": 80 }
+    ]
+  },
+  {
+    "name": "Back End",
+    "icon": "FaServer",
+    "skills": [
+      { "name": "Node.js", "percent": 85 },
+      { "name": "Express.js", "percent": 80 },
+      { "name": "Firebase", "percent": 75 },
+      { "name": "REST APIs", "percent": 90 },
+      { "name": "MongoDB", "percent": 80 }
+    ]
+  },
+  {
+    "name": "Cloud",
+    "icon": "FaCloud",
+    "skills": [
+      { "name": "AWS", "percent": 70 },
+      { "name": "Azure", "percent": 60 },
+      { "name": "GCP", "percent": 60 },
+      { "name": "Cloud Basics", "percent": 80 }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "icon": "FaCogs",
+    "skills": [
+      { "name": "Git & GitHub", "percent": 90 },
+      { "name": "Agile/Scrum", "percent": 80 },
+      { "name": "Linux", "percent": 85 },
+      { "name": "CI/CD", "percent": 70 }
+    ]
+  }
+]

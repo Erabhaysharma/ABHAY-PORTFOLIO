@@ -1,0 +1,37 @@
+/* Animated galaxy background for CV page */
+.galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+.galaxy-planet {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #aaf 40%, #44f 100%);
+  opacity: 0.5;
+  animation: planet-move 12s linear infinite;
+}
+
+@keyframes planet-move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}

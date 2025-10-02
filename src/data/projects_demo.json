@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "Personal Portfolio Website",
+    "description": "A modern, responsive portfolio to showcase my work, skills, and contact info. Built with React and styled-components.",
+    "stack": ["React", "styled-components", "Vite"],
+    "code": "https://github.com/username/portfolio",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// App.jsx\nfunction App() {\n  return <h1>Hello, Portfolio!</h1>;\n}"
+  },
+  {
+    "id": "2",
+    "title": "Task Manager API",
+    "description": "A RESTful API for managing tasks, with JWT authentication and MongoDB storage.",
+    "stack": ["Node.js", "Express", "MongoDB", "JWT"],
+    "code": "https://github.com/username/task-manager-api",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// routes/task.js\nrouter.get('/tasks', auth, async (req, res) => {\n  const tasks = await Task.find({ owner: req.user._id });\n  res.send(tasks);\n});"
+  },
+  {
+    "id": "3",
+    "title": "Weather Dashboard",
+    "description": "A dashboard that shows real-time weather data for any city, using the OpenWeatherMap API.",
+    "stack": ["React", "Chart.js", "OpenWeatherMap API"],
+    "code": "https://github.com/username/weather-dashboard",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// Weather.js\nfetch(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=API_KEY`)\n  .then(res => res.json())\n  .then(data => setWeather(data));"
+  },
+  {
+    "id": "4",
+    "title": "Blog Platform",
+    "description": "A full-stack blog platform with Markdown support, user authentication, and comments.",
+    "stack": ["Next.js", "MongoDB", "Tailwind CSS"],
+    "code": "https://github.com/username/blog-platform",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// pages/api/posts.js\nexport default async function handler(req, res) {\n  const posts = await db.collection('posts').find({}).toArray();\n  res.status(200).json(posts);\n}"
+  },
+  {
+    "id": "5",
+    "title": "E-commerce Store",
+    "description": "A simple e-commerce store with product listings, cart, and Stripe payments.",
+    "stack": ["React", "Redux", "Stripe API"],
+    "code": "https://github.com/username/ecommerce-store",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// Cart.js\nconst total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);"
+  }
+  ,
+   {
+    "id": "5",
+    "title": "E-commerce Store",
+    "description": "A simple e-commerce store with product listings, cart, and Stripe payments.",
+    "stack": ["React", "Redux", "Stripe API"],
+    "code": "https://github.com/username/ecommerce-store",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "snippet": "// Cart.js\nconst total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);"
+  }
+]
