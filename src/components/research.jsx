@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../public/style/research.css";
+import "../style/research.css";
 import { getResearch } from "../api"; // <-- import API call
 
 export default function Research() {

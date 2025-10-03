@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../public/style/exprence.css";
+import "../style/exprence.css";
 import { FaGraduationCap, FaBriefcase, FaRegCalendarAlt } from "react-icons/fa";
 import { getExperience } from "../api"; // <-- use your API
 

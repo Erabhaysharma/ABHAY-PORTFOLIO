@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import projects from "../data/projects_demo.json";
-import "../../public/style/admin.css";
+import "../style/research.css";
 
 // Helper to generate random bubbles
 const NUM_BUBBLES = 18;

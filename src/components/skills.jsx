@@ -9,7 +9,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-import "../../public/style/skill.css";
+import "../style/skill.css";
 import { getSkills } from "../api"; 
 
 const iconMap = {

@@ -1,6 +1,6 @@
 import React from "react";
 import contactData from "../data/contect.json";
-import "../../public/style/contact.css";
+import "../style/contact.css";
 import { FiMail, FiMapPin, FiCoffee } from "react-icons/fi";
 
 const iconMap = {

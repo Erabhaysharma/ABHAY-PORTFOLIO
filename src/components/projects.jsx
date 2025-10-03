@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import "../../public/style/projects.css";
+import "../style/projects.css";
 import { getProjects } from "../api"; // <-- use your API functions
 
 const dotActive = { background: "#0a66c2" };
