@@ -58,3 +58,8 @@ export const updateAdminCredential = (oldUsername, oldPassword, newUsername, new
     new_password: newPassword,
   });
 
+// ---- Admin Login ----
+// Admin login
+export const adminLogin = (username, password) =>
+  API.post("/login", { username, password });
+

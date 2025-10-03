@@ -1,54 +1,33 @@
 import React, { useState } from "react";
-import "../style/adminlogin.css"; // adjust path if needed
-import { useNavigate } from "react-router-dom"; // For navigation
+import "../style/adminlogin.css";
+import { useNavigate } from "react-router-dom";
+import { adminLogin } from "../api"; // import axios login
 
-export default function AdminLogin({ onLogin }) {
+export default function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const navigate = useNavigate(); // React Router navigation
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Frontend validation to match FastAPI model
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&]).{1,6}$/;
 
     if (!username || !password) {
       setError("Please fill all fields");
       return;
     }
-    if (!emailRegex.test(username)) {
-      setError("Please enter a valid email address");
-      return;
-    }
-    if (!passwordRegex.test(password)) {
-      setError(
-        "Password must have 1 uppercase, 1 number, 1 symbol, max 6 characters"
-      );
-      return;
-    }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-      });
+      const res = await adminLogin(username, password);
 
       if (res.status === 200) {
-        // Login successful
-        localStorage.setItem("isAdmin", "true"); // ✅ save login state
-        navigate("/admin"); // redirect to admin page
-      } else {
-        const data = await res.json();
-        setError(data.detail || "Login failed");
+        localStorage.setItem("isAdmin", "true");
+        navigate("/admin");
       }
     } catch (err) {
-      console.error(err);
-      setError("Server error. Please try again later.");
+      console.error(err.response?.data || err);
+      setError(err.response?.data?.detail || "Server error. Please try again later.");
     }
   };
 
@@ -56,9 +35,7 @@ export default function AdminLogin({ onLogin }) {
     <div className="admin-login-wrapper">
       <div className="admin-login-card">
         <h2>Admin Login</h2>
-
         {error && <div className="admin-login-error">{error}</div>}
-
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -79,7 +56,6 @@ export default function AdminLogin({ onLogin }) {
           </button>
         </form>
 
-        {/* Update Password button */}
         <div style={{ marginTop: "1rem" }}>
           <button
             className="admin-login-forgot"
@@ -89,7 +65,6 @@ export default function AdminLogin({ onLogin }) {
           </button>
         </div>
 
-        {/* Back to Home button */}
         <div style={{ marginTop: "1rem" }}>
           <button className="admin-login-forgot" onClick={() => navigate("/")}>
             Back to Home
