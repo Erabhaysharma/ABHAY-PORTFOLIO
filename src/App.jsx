@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
-import Update_password from "./components/admin_auth/update_login_crendential.jsx"; // ✅ import update component
-
+import Update_password from "./components/admin_auth/update_login_crendential.jsx"; 
 import ProjectsPage from "./pages/projects"; 
 import Admin from "./pages/admin.jsx";
-import AdminLogin from "./pages/adminlogin.jsx"; // ✅ import login page
-
+import AdminLogin from "./pages/adminlogin.jsx"; 
 import ForgotPassword from "./components/admin_auth/forgot_password.jsx";
 import VerifyOtp from "./components/admin_auth/veryfy_via_otp.jsx";
 import ResetPassword from "./components/admin_auth/reset_password_otp.jsx";
@@ -19,58 +17,44 @@ const ProtectedRoute = ({ children }) => {
 
 const AppContent = () => {
   const location = useLocation();
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
-  });
-
-  useEffect(() => {
-    document.body.className = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const handleThemeToggle = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
 
   return (
-    <div className={theme}>
+    <div className="dark">  {/* ✅ Always dark theme */}
       {location.pathname !== "/admin" &&
        location.pathname !== "/admin-login" &&
        location.pathname !== "/update-admin-credential" && 
-        location.pathname !== "/forgot-password" &&
-        location.pathname !== "/reset-password" &&
-        location.pathname !== "/verify-otp"  &&<Navbar />}
+       location.pathname !== "/forgot-password" &&
+       location.pathname !== "/reset-password" &&
+       location.pathname !== "/verify-otp" && <Navbar />}
 
       <Routes>
-  <Route path="/" element={<Hero />} />
-  <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/" element={<Hero />} />
+        <Route path="/projects" element={<ProjectsPage />} />
 
-  {/* Admin Routes */}
-  <Route path="/admin-login" element={<AdminLogin />} />
-  <Route
-    path="/update-admin-credential"
-    element={
-      <ProtectedRoute>
-        <Update_password />
-      </ProtectedRoute>
-    }
-  />
-  <Route
-    path="/admin"
-    element={
-      <ProtectedRoute>
-        <Admin />
-      </ProtectedRoute>
-    }
-  />
+        {/* Admin Routes */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route
+          path="/update-admin-credential"
+          element={
+            <ProtectedRoute>
+              <Update_password />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
 
-  {/* Forgot Password Flow */}
-  <Route path="/forgot-password" element={<ForgotPassword />} />
-  <Route path="/verify-otp" element={<VerifyOtp />} />
-  <Route path="/reset-password" element={<ResetPassword />} />
-</Routes>
-
-
+        {/* Forgot Password Flow */}
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/verify-otp" element={<VerifyOtp />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+      </Routes>
     </div>
   );
 };
